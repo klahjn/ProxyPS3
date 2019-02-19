@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApp3", "WindowsApp3\WindowsApp3.vbproj", "{51EA3EBA-33C8-45FC-8FBA-44F64C7BCD21}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PS3Proxy GUI", "WindowsApp3\PS3Proxy GUI.vbproj", "{51EA3EBA-33C8-45FC-8FBA-44F64C7BCD21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

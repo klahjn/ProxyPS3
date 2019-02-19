@@ -1,7 +1,13 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" UseMySettingsClassName="true">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="SVR_RESPONSE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"># US
+Dest=84;ImageVersion=00000000;SystemSoftwareVersion=0.00;CDN=http://dus01.ps3.update.playstation.net/update/ps3/image/us/2007_0322_3a5f49bcee3948301aa698ed57ecb10e/PS3UPDAT.PUP;CDN_Timeout=30;</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
 </SettingsFile>

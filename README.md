@@ -1,5 +1,5 @@
-# ProxyPS3
-PS3 Proxy GUI
+# PS3 Proxy Gui [Beta]
+by psykosis
 
 Simple PS3 Proxy w/ GUI by psykosis
 Based on:  https://github.com/mondul/PS3-Proxy

@@ -50,6 +50,6 @@ Public Class Form1
         myProcess.Kill()
     End Sub
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        MsgBox("This GUI was designed by psykosis based on proxy work by mondul." + vbCrLf + "It is designed for one thing, to make the proxy situation Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + "The hosting address is: " + Localip() + " and port: 8080" + vbCrLf + "You can modify your your ps3-updatelist.txt by accessing: " + Application.StartupPath + "\resources\")
+        MsgBox("This GUI was designed by psykosis based on proxy work by mondul." + vbCrLf + "It is designed for one thing, to make the proxy situation Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + "The hosting address is: " + localipp() + " and port: 8080" + vbCrLf + "You can modify your your ps3-updatelist.txt by accessing: " + Application.StartupPath + "\resources\")
     End Sub
 End Class

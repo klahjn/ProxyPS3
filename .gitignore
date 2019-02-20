@@ -259,3 +259,26 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+InstallAware/Any CPU/Check_for_Microsoft_.NET_Framework_4.6_with_Service_Pack_2_(x86_and_x64).mia
+InstallAware/Any CPU/checknet452_x86x64.mia
+InstallAware/Any CPU/CheckWindowsFeatures.mia
+InstallAware/Any CPU/componentstree.dfm
+InstallAware/Any CPU/componentstree.dfm.miaf
+InstallAware/Any CPU/destination.dfm
+InstallAware/Any CPU/destination.dfm.miaf
+InstallAware/Any CPU/finish.dfm
+InstallAware/Any CPU/finish.dfm.miaf
+InstallAware/Any CPU/licensecheck.dfm
+InstallAware/Any CPU/licensecheck.dfm.miaf
+InstallAware/Any CPU/maintenance.dfm
+InstallAware/Any CPU/maintenance.dfm.miaf
+InstallAware/Any CPU/mFileBagEXE.dll
+InstallAware/Any CPU/mMSIExec.dll
+InstallAware/Any CPU/prereq.dfm
+InstallAware/Any CPU/prereq.dfm.miaf
+InstallAware/Any CPU/progress.dfm
+InstallAware/Any CPU/progress.dfm.miaf
+InstallAware/Any CPU/progressprereq.dfm
+InstallAware/Any CPU/progressprereq.dfm.miaf
+InstallAware/Any CPU/ProxyPS3.mia
+InstallAware/Any CPU/ProxyPS3.mpr

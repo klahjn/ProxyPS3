@@ -5,7 +5,7 @@ Public Class Form1
     Dim Bastard As String = "\resources\ps3proxy.exe"
     Public myProcess As Process
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = Localip() + ":8080"
+        Label1.Text = localipp() + ":8080"
         Button2.Enabled = False
         Dim monkey As String = Application.StartupPath + "\resources\ps3-updatelist.txt"
         Dim banana As String = My.Settings.SVR_RESPONSE
@@ -24,10 +24,14 @@ Public Class Form1
         Dim ipaddress As String = iPAddress1.ToString
         Return ipaddress
     End Function
+    Function localipp() As String
+        Dim tmpHostName As String = Dns.GetHostName()
+        Return Dns.GetHostByName(tmpHostName).AddressList(0).ToString()
+    End Function
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         myProcess = Process.Start(Application.StartupPath + Bastard$)
         Label1.Text = "Starting Proxy..."
-        Label1.Text = Localip() + ":8080"
+        Label1.Text = localipp() + ":8080"
         Button2.Enabled = True
         Button1.Enabled = False
         Label3.Text = "Running."
@@ -35,7 +39,7 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Label1.Text = "Stopping Proxy..."
         If myProcess.HasExited = False Then myProcess.Kill()
-        Label1.Text = Localip() + ":8080"
+        Label1.Text = localipp() + ":8080"
         Button1.Enabled = True
         Button2.Enabled = False
         Label3.Text = "Stopped"

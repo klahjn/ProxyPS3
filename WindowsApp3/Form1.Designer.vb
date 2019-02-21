@@ -30,6 +30,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Label1
@@ -55,6 +56,7 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Location = New System.Drawing.Point(91, 58)
         Me.Button2.Name = "Button2"
@@ -75,7 +77,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Label2.Location = New System.Drawing.Point(172, 60)
+        Me.Label2.Location = New System.Drawing.Point(172, 58)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 5
@@ -88,7 +90,6 @@ Partial Class Form1
         Me.NotifyIcon1.BalloonTipTitle = "PS3 Proxy"
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
         Me.NotifyIcon1.Text = "PS3 Proxy"
-        Me.NotifyIcon1.Visible = True
         '
         'Form1
         '
@@ -119,4 +120,5 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

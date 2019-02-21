@@ -38,10 +38,17 @@ Public Class Form1
     End Sub
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         On Error Resume Next
+        NotifyIcon1.Dispose()
         If myProcess.HasExited Then Exit Sub
         myProcess.Kill()
     End Sub
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         MsgBox("This GUI was designed by psykosis based on proxy work by mondul." + vbCrLf + "It is designed for one thing, to make the proxy situation Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + "The hosting address is: " + localipp() + " and port: 8080" + vbCrLf + "You can modify your your ps3-updatelist.txt by accessing: " + Application.StartupPath + "\resources\")
+    End Sub
+    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
+        Me.Show() : Me.WindowState = FormWindowState.Normal
+    End Sub
+    Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        If Me.WindowState = FormWindowState.Minimized Then Me.Hide()
     End Sub
 End Class

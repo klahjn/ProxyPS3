@@ -87,7 +87,7 @@ Partial Class Form1
         Me.NotifyIcon1.BalloonTipText = "Application Running"
         Me.NotifyIcon1.BalloonTipTitle = "PS3 Proxy"
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Text = "PS3 Proxy"
         Me.NotifyIcon1.Visible = True
         '
         'Form1

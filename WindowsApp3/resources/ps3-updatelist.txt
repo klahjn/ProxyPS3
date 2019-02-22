@@ -1,2 +1,0 @@
-# US
-Dest=84;ImageVersion=00000000;SystemSoftwareVersion=0.00;CDN=http://dus01.ps3.update.playstation.net/update/ps3/image/us/2007_0322_3a5f49bcee3948301aa698ed57ecb10e/PS3UPDAT.PUP;CDN_Timeout=30;

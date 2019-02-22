@@ -53,29 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("# US"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Dest=84;ImageVersion=00000000;SystemSoftwareVersion=0.00;CDN=http://dus01.p"& _ 
-            "s3.update.playstation.net/update/ps3/image/us/2007_0322_3a5f49bcee3948301aa698ed"& _ 
-            "57ecb10e/PS3UPDAT.PUP;CDN_Timeout=30;")>  _
-        Public ReadOnly Property SVR_RESPONSE() As String
-            Get
-                Return CType(Me("SVR_RESPONSE"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Setting() As String
-            Get
-                Return CType(Me("Setting"),String)
-            End Get
-            Set
-                Me("Setting") = value
-            End Set
-        End Property
     End Class
 End Namespace
 

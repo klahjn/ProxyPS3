@@ -13,9 +13,9 @@ Public Class Form1
             My.Settings.FirstRun = "1"
             My.Settings.Save()
         End If
-        ToolTip1.SetToolTip(Label2, "PS3 Proxy " + Application.ProductVersion + vbCrLf + vbCrLf + "This GUI was designed by psykosis based on proxy work by mondul." + vbCrLf + "It is designed for one thing, to be Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + vbCrLf + vbCrLf + "The hosting address is: " + localipp() + " and port: 8080" + vbCrLf + vbCrLf + "You can modify your your ps3-updatelist.txt by accessing: " + Application.StartupPath + "\resources\" + vbCrLf + vbCrLf + "Special thanks to:  pink1")
+        ToolTip1.SetToolTip(Label2, "PS3 Proxy " + Application.ProductVersion + vbCrLf + vbCrLf + "This GUI was designed by psykosis." + vbCrLf + "It is designed for one thing, to be Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + vbCrLf + "The hosting address is: " + localipp() + " and port: 8080" + vbCrLf + vbCrLf + "Special thanks to:  mondul, pink1, Cypher_CG89")
         Label1.Text = localipp() + ":8080"
-        Me.Text = Me.Text + " " + Application.ProductVersion.ToString + " [B2]"
+        Me.Text = Me.Text + " " + Application.ProductVersion.ToString
         Me.Width = 260
     End Sub
     Private Sub firewallrule()

@@ -149,6 +149,9 @@
     </None>
     <None Include="App.config" />
     <None Include="PS3Proxy GUI_TemporaryKey.pfx" />
+    <Content Include="resources\ps3help.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -167,9 +170,6 @@
     <Content Include="resources\ps3proxy.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="resources\ps3proxy.old">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

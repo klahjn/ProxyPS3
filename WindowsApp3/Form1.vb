@@ -2,11 +2,34 @@
 Imports System.Net
 Public Class Form1
     Dim var1 As String = "\resources\ps3proxy.exe"
+    Dim var2 As String = "\resources\ps3help.pdf"
+    Dim var3 As String = "netsh advfirewall firewall add rule name=""Open Port 8080"" dir=in action=allow protocol=TCP localport=8080"
     Public myProcess As Process
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'My.Settings.FirstRun = 0
+        If My.Settings.FirstRun = "0" Then
+            MsgBox("Since this is your first time running this application, we need to open a port on your firewall.  Please click yes to the administrator prompt that follows.", vbOKOnly, "PS3 Proxy")
+            firewallrule()
+            My.Settings.FirstRun = "1"
+            My.Settings.Save()
+        End If
         ToolTip1.SetToolTip(Label2, "PS3 Proxy " + Application.ProductVersion + vbCrLf + vbCrLf + "This GUI was designed by psykosis based on proxy work by mondul." + vbCrLf + "It is designed for one thing, to be Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + vbCrLf + vbCrLf + "The hosting address is: " + localipp() + " and port: 8080" + vbCrLf + vbCrLf + "You can modify your your ps3-updatelist.txt by accessing: " + Application.StartupPath + "\resources\" + vbCrLf + vbCrLf + "Special thanks to:  pink1")
         Label1.Text = localipp() + ":8080"
         Me.Text = Me.Text + " " + Application.ProductVersion.ToString + " [B2]"
+    End Sub
+    Private Sub firewallrule()
+        Dim psi As New ProcessStartInfo() ' Initialize ProcessStartInfo (psi)
+        psi.Verb = "runas" ' runas = Run As Administrator
+        psi.WindowStyle = ProcessWindowStyle.Hidden
+        psi.FileName = "cmd.exe" ' File or exe to run (this cannot take arguments, use ProcessStartInfo.Arguments instead
+        psi.Arguments = " /c " + var3 ' Arguments for the process that you're going to run
+        Try
+            'MsgBox(psi.FileName.ToString + psi.Arguments.ToString)
+            Process.Start(psi) ' Run the process (User is required to press Yes to run the program with Administrator access)
+        Catch
+            MsgBox("User cancelled the operation", 16, "") ' User pressed No
+        End Try
+        MsgBox("The firewall rule has been installed.  This has opened port 8080 on your firewall so that this proxy will work properly.", vbOKOnly, "PS3 Proxy")
     End Sub
     Function localipp() As String
         Dim tmpHostName As String = Dns.GetHostName()
@@ -38,5 +61,8 @@ Public Class Form1
         Else
             Me.NotifyIcon1.Visible = False
         End If
+    End Sub
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Process.Start(Application.StartupPath + var2)
     End Sub
 End Class

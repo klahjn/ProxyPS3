@@ -53,6 +53,18 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property FirstRun() As String
+            Get
+                Return CType(Me("FirstRun"),String)
+            End Get
+            Set
+                Me("FirstRun") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

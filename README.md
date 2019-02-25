@@ -4,7 +4,6 @@ by psykosis
 Simple PS3 Proxy w/ GUI by psykosis
 Based on:  https://github.com/mondul/PS3-Proxy
 
-
 Installation Instructions:
 1.  install application
 2.  Click Start

@@ -24,7 +24,9 @@ Public Class Form1
     End Sub
     Function localipp() As String
         Dim tmpHostName As String = Dns.GetHostName()
+#Disable Warning BC40000 ' 'Public Shared Overloads Function GetHostByName(hostName As String) As IPHostEntry' is obsolete: 'GetHostByName is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202'.
         Return Dns.GetHostByName(tmpHostName).AddressList(0).ToString()
+#Enable Warning BC40000 ' 'Public Shared Overloads Function GetHostByName(hostName As String) As IPHostEntry' is obsolete: 'GetHostByName is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202'.
     End Function
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         myProcess = Process.Start(Application.StartupPath + var1)

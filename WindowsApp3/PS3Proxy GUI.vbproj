@@ -149,6 +149,7 @@
     </None>
     <None Include="App.config" />
     <None Include="PS3Proxy GUI_TemporaryKey.pfx" />
+    <None Include="resources\main.jpg" />
     <Content Include="resources\ps3help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

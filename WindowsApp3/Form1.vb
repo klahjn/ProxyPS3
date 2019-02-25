@@ -16,18 +16,18 @@ Public Class Form1
         ToolTip1.SetToolTip(Label2, "PS3 Proxy " + Application.ProductVersion + vbCrLf + vbCrLf + "This GUI was designed by psykosis based on proxy work by mondul." + vbCrLf + "It is designed for one thing, to be Simple." + vbCrLf + "Please make sure you setup your proxy in network settings on your ps3." + vbCrLf + vbCrLf + vbCrLf + "The hosting address is: " + localipp() + " and port: 8080" + vbCrLf + vbCrLf + "You can modify your your ps3-updatelist.txt by accessing: " + Application.StartupPath + "\resources\" + vbCrLf + vbCrLf + "Special thanks to:  pink1")
         Label1.Text = localipp() + ":8080"
         Me.Text = Me.Text + " " + Application.ProductVersion.ToString + " [B2]"
+        Me.Width = 260
     End Sub
     Private Sub firewallrule()
-        Dim psi As New ProcessStartInfo() ' Initialize ProcessStartInfo (psi)
-        psi.Verb = "runas" ' runas = Run As Administrator
+        Dim psi As New ProcessStartInfo()
+        psi.Verb = "runas"
         psi.WindowStyle = ProcessWindowStyle.Hidden
-        psi.FileName = "cmd.exe" ' File or exe to run (this cannot take arguments, use ProcessStartInfo.Arguments instead
-        psi.Arguments = " /c " + var3 ' Arguments for the process that you're going to run
+        psi.FileName = "cmd.exe"
+        psi.Arguments = " /c " + var3
         Try
-            'MsgBox(psi.FileName.ToString + psi.Arguments.ToString)
-            Process.Start(psi) ' Run the process (User is required to press Yes to run the program with Administrator access)
+            Process.Start(psi)
         Catch
-            MsgBox("User cancelled the operation", 16, "") ' User pressed No
+            MsgBox("You have cancelled the firewall rule installation.  The program may not operate properly unless you disable your firewall.", 16, "PS3 Proxy")
         End Try
         MsgBox("The firewall rule has been installed.  This has opened port 8080 on your firewall so that this proxy will work properly.", vbOKOnly, "PS3 Proxy")
     End Sub
